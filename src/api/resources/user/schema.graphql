@@ -4,3 +4,7 @@ type User {
   posts: [Post]!
   comments: [Comment]!
 }
+
+type Query {
+  getUser: User!
+}
