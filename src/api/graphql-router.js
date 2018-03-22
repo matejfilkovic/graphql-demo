@@ -5,6 +5,7 @@ const { makeExecutableSchema } = require('graphql-tools')
 const { graphqlExpress } = require('apollo-server-express')
 
 const userResolvers = require('./resources/user/resolvers')
+const postResolvers = require('./resources/post/resolvers')
 
 function loadTypes(moduleName) {
   return (
@@ -28,7 +29,8 @@ const schema = makeExecutableSchema({
   ],
   resolvers: merge(
     {},
-    userResolvers
+    userResolvers,
+    postResolvers
   )
 })
 

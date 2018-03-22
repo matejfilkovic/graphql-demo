@@ -1,5 +1,10 @@
 type Post {
+  id: ID!
   text: String!
   comments: [Comment]!
   user: User!
+}
+
+extend type Query {
+  getPosts: [Post]!
 }

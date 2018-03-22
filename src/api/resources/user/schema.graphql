@@ -1,4 +1,5 @@
 type User {
+  id: ID!
   firstName: String!
   lastName: String!
   posts: [Post]!
@@ -6,5 +7,6 @@ type User {
 }
 
 type Query {
-  getUser: User!
+  getUsers: [User]!
+  getUser(id: ID!): User!
 }

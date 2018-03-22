@@ -8,11 +8,7 @@ const schema = new mongoose.Schema({
   comments: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'comment'
-  }],
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'user'
-  }
+  }]
 })
 
 const Post = mongoose.model('post', schema)
