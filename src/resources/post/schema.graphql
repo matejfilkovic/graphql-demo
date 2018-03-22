@@ -1,0 +1,5 @@
+type Post {
+  text: String!
+  comments: [Comment]!
+  user: User!
+}
